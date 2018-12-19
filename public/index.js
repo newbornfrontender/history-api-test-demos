@@ -1,15 +1,12 @@
-const show = (output) =>
-  (document.querySelector('#output').innerHTML += `<p>${output}</p>`);
+document.addEventListener('DOMContentLoaded', () =>
+  console.log('DOM was loaded!'),
+);
 
-// show(`location.href: ${location.href}`);
-// show(`location.search: ${location.search || 'nothing'}`);
-// show(`location.hash: ${location.hash || 'nothing'}`);
+const show = (output) => {
+  const p = document.createElement('p');
+  p.textContent = output;
 
-// history.go(-3);
-// history.back();
-// history.forward()
+  document.querySelector('output').appendChild(p);
 
-// location.reload()
-// location.replace('https://www.google.com')
-
-show(`history.state: ${history.state}`)
+  setTimeout(() => document.querySelector('output').removeChild(p), 4000);
+};
