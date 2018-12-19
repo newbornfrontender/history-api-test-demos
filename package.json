@@ -1,0 +1,9 @@
+{
+  "name": "history-api-test-demos",
+  "version": "1.0.0",
+  "description": "Тестовые демо для понимания работы History API",
+  "repository": "https://github.com/newbornfrontender/history-api-test-demos.git",
+  "author": "Infant Frontender <newbornfrontender@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
