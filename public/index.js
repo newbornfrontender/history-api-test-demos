@@ -7,15 +7,9 @@ function show(output) {
   setTimeout(() => document.querySelector('#output').removeChild(p), 4000);
 };
 
-function hashChange(event) {
-  show('hashchange')
-}
-
-function popState(event) {
-  show('popstate')
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-  window.addEventListener('hashchange', hashChange);
-  window.addEventListener('popstate', popState);
+  document.querySelector('#link').addEventListener('click', () => show('clicked'))
+
+  window.addEventListener('hashchange', () => show('hashchange'));
+  window.addEventListener('popstate', () => show('popstate'));
 });
